@@ -1,0 +1,143 @@
+curl -X PATCH -H "Content-Type: application/sparql-update" --data-binary "@body.rdf" "http://localhost:8080/rest/"
+
+<> sc:attributionLabel "Provided by Example Organization" .
+<> sc:hasRanges _:c14n19 .
+_:c14n19 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/range/r001> .
+_:c14n19 rdf:rest rdf:nil.
+<> sc:hasSequences _:c14n10 .
+_:c14n10 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> .
+_:c14n10 rdf:rest rdf:nil .
+<> sc:metadataLabels _:c14n13 .
+_:c14n13 rdf:first_:c14n4 .
+_:c14n4 rdf:value "Anne Author" .
+_:c14n4 rdfs:label "Author" .
+_:c14n13 rdf:rest _:c14n8 .
+_:c14n8 rdf:first_:c14n17 .
+_:c14n17 rdf:value "Paris, circa 1400"@en .
+_:c14n17 rdf:value "Paris, environ 14eme siecle"@fr .
+_:c14n17 rdfs:label "Published" .
+_:c14n8 rdf:rest rdf:nil .
+<> <http://purl.org/dc/elements/1.1/description> "First Manifest Test" .
+<> <http://purl.org/dc/terms/isPartOf> <http://localhost:8080/fcrepo/rest/collection/top> .
+<> <http://purl.org/dc/terms/rights> <http://www.example.org/license.html> .
+<> <http://rdfs.org/sioc/services#has_service> rdf:nil.
+<> rdf:type sc:Manifest .
+<> rdfs:label "Book 1" .
+<> rdfs:seeAlso <http://www.example.org/library/catalog/book1.marc> .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> sc:hasCanvases _:c14n16 .
+_:c14n16 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> .
+_:c14n16 rdf:rest _:c14n21 .
+_:c14n21 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> .
+_:c14n21 rdf:rest _:c14n6 .
+_:c14n6 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> .
+_:c14n6 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> <http://iiif.io/api/presentation/2#viewingDirection> <http://iiif.io/api/presentation/2#leftToRightDirection> .
+<http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> <http://iiif.io/api/presentation/2#viewingHint> <http://iiif.io/api/presentation/2#pagedHint> .
+<http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> rdf:type sc:Sequence .
+<http://localhost:8080/fcrepo/rest/edition/base/sequence/normal> rdfs:label "Current Page Order" .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> oa:hasImageAnnotations _:c14n18 .
+_:c14n18 rdf:first _:c14n12 .
+_:c14n12 rdf:type oa:Annotation .
+_:c14n12 oa:hasBody <http://localhost:8080/fcrepo/rest/edition/base/res/001.tif> .
+_:c14n12 oa:hasTarget <http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> .
+_:c14n12 oa:motivatedBy <http://iiif.io/api/presentation/2#painting> .
+_:c14n18 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/s1> sc:hasLists _:c14n7 .
+_:c14n7 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/list/l001> .
+_:c14n7 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> rdf:type sc:Canvas .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> rdfs:label "S. 1" .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> exif:height "1000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> exif:width "750"^^xsd:Integer .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> oa:hasImageAnnotations _:c14n15 .
+_:c14n15 rdf:first _:c14n11 .
+_:c14n11 rdf:type oa:Annotation .
+    _:c14n11 oa:hasBody <http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> .
+_:c14n11 oa:hasTarget <http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> .
+_:c14n11 oa:motivatedBy <http://iiif.io/api/presentation/2#painting> .
+_:c14n15 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> sc:hasLists _:c14n14 .
+_:c14n14 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/list/l002> .
+_:c14n14 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> rdf:type sc:Canvas .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> rdfs:label "S. 2" .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> exif:height "1000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> exif:width "750"^^xsd:Integer .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> oa:hasImageAnnotations _:c14n9 .
+_:c14n9 rdf:first _:c14n0 .
+_:c14n0 rdf:type oa:Annotation .
+_:c14n0 oa:hasBody <http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> .
+_:c14n0 oa:hasTarget <http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> .
+_:c14n0 oa:motivatedBy <http://iiif.io/api/presentation/2#painting> .
+_:c14n9 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> sc:hasLists _:c14n5 .
+_:c14n5 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/list/l003> .
+_:c14n5 rdf:rest rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> rdf:type sc:Canvas .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> rdfs:label "S. 3" .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> exif:height "1000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/canvas/c003> exif:width "750"^^xsd:Integer .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/list/l001> rdf:type sc:AnnotationList .
+<http://localhost:8080/fcrepo/rest/edition/base/list/l002> rdf:type sc:AnnotationList .
+<http://localhost:8080/fcrepo/rest/edition/base/list/l003> rdf:type sc:AnnotationList .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/range/r001> sc:hasCanvases _:c14n3 .
+_:c14n3 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/c001> .
+_:c14n3 rdf:rest _:c14n20 .
+_:c14n20 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/c002> .
+_:c14n20 rdf:rest _:c14n2 .
+_:c14n2 rdf:first <http://localhost:8080/fcrepo/rest/edition/base/canvas/s3#xywh=0,0,750,300> .
+_:c14n2 rdf:resr rdf:nil .
+<http://localhost:8080/fcrepo/rest/edition/base/range/r001> rdf:type sc:Range .
+<http://localhost:8080/fcrepo/rest/edition/base/range/r001> rdfs:label "Introduction" .
+ 
+<http://localhost:8080/fcrepo/rest/edition/base/res/001.tif> <http://purl.org/dc/elements/1.1/format> "image/jpeg" .
+<http://localhost:8080/fcrepo/rest/edition/base/res/001.tif> <http://rdfs.org/sioc/services#has_service> <http://localhost:8888/iiif/001> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/001.tif rdf:type <http://purl.org/dc/dcmitype/Image> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/001.tif> exif:height "2000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/res/001.tif> exif:width "1500"^^xsd:Integer .
+    
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> <http://purl.org/dc/elements/1.1/format> "image/jpeg" .
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif <http://rdfs.org/sioc/services#has_service> <http://localhost:8888/iiif/002> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> rdf:type <http://purl.org/dc/dcmitype/Image> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> exif:height "2000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> exif:width "1500"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/res/002.tif> <http://iiif.io/api/image/2#hasTile> _:c14n1 .
+_:c14n1 <http://iiif.io/api/image/2#scaleFactor> "1"^^xsd:Integer .
+_:c14n1 <http://iiif.io/api/image/2#scaleFactor> "16"^^xsd:Integer .
+_:c14n1 <http://iiif.io/api/image/2#scaleFactor> "2"^^xsd:Integer .
+_:c14n1 <http://iiif.io/api/image/2#scaleFactor> "4"^^xsd:Integer .
+_:c14n1 <http://iiif.io/api/image/2#scaleFactor> "8"^^xsd:Integer .
+_:c14n1 exif:width "512"^^xsd:Integer .    
+            
+<http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> <http://purl.org/dc/elements/1.1/format> "image/jpeg" .
+<http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> <http://rdfs.org/sioc/services#has_service> <http://localhost:8888/iiif/003> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> rdf:type <http://purl.org/dc/dcmitype/Image> .
+<http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> exif:height "2000"^^xsd:Integer .
+<http://localhost:8080/fcrepo/rest/edition/base/res/003.tif> exif:width "1500"^^xsd:Integer .
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

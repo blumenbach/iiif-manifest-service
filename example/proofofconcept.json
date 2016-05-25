@@ -1,0 +1,431 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@graph": [
+    {
+      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/manifest",
+      "@type": "sc:Manifest",
+      "sc:hasRanges": null,
+      "sc:hasSequences": {
+        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/1a/d3/a3/52/1ad3a352-ee97-48fb-8202-c970d80c824c",
+        "rdf:first": {
+          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/sequence/normal",
+          "@type": "sc:Sequence",
+          "sc:hasCanvases": {
+            "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/59/21/c1/90/5921c190-142e-46ad-a504-479fa2114012",
+            "rdf:first": {
+              "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c001",
+              "sc:hasImageAnnotations": {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/2a/ec/65/dd/2aec65dd-6721-4633-a873-a8c2ddd930eb",
+                "rdf:first": {
+                  "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/74/1b/79/3e/741b793e-6521-4a92-9282-030085b321f5",
+                  "@type": "oa:Annotation",
+                  "resource": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/001.tif",
+                    "@type": "dctypes:Image",
+                    "service": "http://localhost:8888/iiif/001"
+                  }
+                }
+              },
+              "sc:hasLists": {
+                "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l001"
+              },
+              "exif:height": 2112,
+              "exif:width": 3314
+            },
+            "rdf:rest": [
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/59/21/c1/90/5921c190-142e-46ad-a504-479fa2114012"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e0/36/63/78/e0366378-2db5-477a-860b-0456f1356b93"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/f0/c7/2c/5a/f0c72c5a-9b89-48b5-b0e0-010a15dd2e3a"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/83/5b/1f/3c/835b1f3c-24b0-4959-8266-e50209e42071"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e5/76/db/27/e576db27-bc7d-400e-a309-90d790c8342f"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/85/75/28/55/85752855-ac1f-497f-8264-e2eb490328cd"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/fc/6d/58/2a/fc6d582a-368b-46a4-a2c4-436cbc5dea1c"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/2e/f0/10/88/2ef01088-216f-4717-9cc2-b4fcb042da4f"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/63/aa/f1/95/63aaf195-490d-41ef-a3e6-39793e88bafb"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/21/c0/dd/47/21c0dd47-1de9-43bf-ab3c-713d9596c0e8"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/d4/02/5c/7b/d4025c7b-8872-4e4d-8610-ab165d5ad519"
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/c0/94/01/8a/c094018a-1a95-4efb-b5f4-874fd8aeb72c",
+                "rdf:first": {
+                  "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c002",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/35/81/cf/02/3581cf02-ffe4-433a-a0f9-73b1bd915301",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/002.tif",
+                        "@type": "dctypes:Image",
+                        "service": "http://localhost:8888/iiif/002"
+                      }
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l002"
+                  },
+                  "exif:height": 2112,
+                  "exif:width": 3314
+                },
+                "rdf:rest": {
+                  "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/64/d6/26/32/64d62632-8fab-4858-a1c7-b6d5d56120e9"
+                }
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/64/d6/26/32/64d62632-8fab-4858-a1c7-b6d5d56120e9",
+                "rdf:first": {
+                  "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c003",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/00/d5/ce/15/00d5ce15-85b3-4d9d-b09d-189d6c6a62ce",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/003.tif",
+                        "@type": "dctypes:Image",
+                        "service": "http://localhost:8888/iiif/003"
+                      }
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l003"
+                  },
+                  "exif:height": 2112,
+                  "exif:width": 3314
+                },
+                "rdf:rest": {
+                  "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/d4/02/5c/7b/d4025c7b-8872-4e4d-8610-ab165d5ad519",
+                  "rdf:first": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c004",
+                    "@type": "sc:Canvas",
+                    "images": [
+                      {
+                        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/70/16/6d/e5/70166de5-5c42-4745-b0b6-1cea0cdea19f",
+                        "@type": "oa:Annotation",
+                        "resource": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/004.tif",
+                          "@type": "dctypes:Image",
+                          "service": "http://localhost:8888/iiif/004"
+                        }
+                      }
+                    ],
+                    "sc:hasLists": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l004"
+                    },
+                    "exif:height": 2112,
+                    "exif:width": 3314
+                  },
+                  "rdf:rest": {
+                    "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/63/aa/f1/95/63aaf195-490d-41ef-a3e6-39793e88bafb",
+                    "rdf:first": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c005",
+                      "@type": "sc:Canvas",
+                      "images": [
+                        {
+                          "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/c8/f7/aa/88/c8f7aa88-830b-4503-a15b-863bc0589233",
+                          "@type": "oa:Annotation",
+                          "resource": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/005.tif",
+                            "@type": "dctypes:Image",
+                            "service": "http://localhost:8888/iiif/005"
+                          }
+                        }
+                      ],
+                      "sc:hasLists": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l005"
+                      },
+                      "exif:height": 2112,
+                      "exif:width": 3314
+                    },
+                    "rdf:rest": {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/fc/6d/58/2a/fc6d582a-368b-46a4-a2c4-436cbc5dea1c",
+                      "rdf:first": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c006",
+                        "@type": "sc:Canvas",
+                        "images": [
+                          {
+                            "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/6b/3f/81/8d/6b3f818d-9c68-4522-852c-16c05c659b2e",
+                            "@type": "oa:Annotation",
+                            "resource": {
+                              "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/006.tif",
+                              "@type": "dctypes:Image",
+                              "service": "http://localhost:8888/iiif/006"
+                            }
+                          }
+                        ],
+                        "sc:hasLists": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l006"
+                        },
+                        "exif:height": 2112,
+                        "exif:width": 3314
+                      },
+                      "rdf:rest": {
+                        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/21/c0/dd/47/21c0dd47-1de9-43bf-ab3c-713d9596c0e8",
+                        "rdf:first": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c007",
+                          "@type": "sc:Canvas",
+                          "images": [
+                            {
+                              "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/ec/b6/50/d6/ecb650d6-256a-40e4-a6ce-1f1974a0a62b",
+                              "@type": "oa:Annotation",
+                              "resource": {
+                                "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/007.tif",
+                                "@type": "dctypes:Image",
+                                "service": "http://localhost:8888/iiif/007"
+                              }
+                            }
+                          ],
+                          "sc:hasLists": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l007"
+                          },
+                          "exif:height": 2112,
+                          "exif:width": 3314
+                        },
+                        "rdf:rest": {
+                          "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e5/76/db/27/e576db27-bc7d-400e-a309-90d790c8342f",
+                          "rdf:first": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c008",
+                            "@type": "sc:Canvas",
+                            "images": [
+                              {
+                                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/21/af/c0/67/21afc067-a1b7-460a-9203-765ec7b317de",
+                                "@type": "oa:Annotation",
+                                "resource": {
+                                  "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/008.tif",
+                                  "@type": "dctypes:Image",
+                                  "service": "http://localhost:8888/iiif/008"
+                                }
+                              }
+                            ],
+                            "sc:hasLists": {
+                              "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l008"
+                            },
+                            "exif:height": 2112,
+                            "exif:width": 3314
+                          },
+                          "rdf:rest": {
+                            "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/b1/d0/46/dd/b1d046dd-f3a6-421f-a6ef-c83b428f9c49"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/b1/d0/46/dd/b1d046dd-f3a6-421f-a6ef-c83b428f9c49",
+                "rdf:first": {
+                  "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c009",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/52/c8/bc/53/52c8bc53-62ce-4832-8de7-6e774d5c0d57",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/009.tif",
+                        "@type": "dctypes:Image",
+                        "service": "http://localhost:8888/iiif/009"
+                      }
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l009"
+                  },
+                  "exif:height": 2112,
+                  "exif:width": 3314
+                },
+                "rdf:rest": {
+                  "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/f0/c7/2c/5a/f0c72c5a-9b89-48b5-b0e0-010a15dd2e3a",
+                  "rdf:first": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c010",
+                    "@type": "sc:Canvas",
+                    "images": [
+                      {
+                        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/6e/dd/71/f4/6edd71f4-f621-4c21-b298-b2f861809f4b",
+                        "@type": "oa:Annotation",
+                        "resource": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/010.tif",
+                          "@type": "dctypes:Image",
+                          "service": "http://localhost:8888/iiif/010"
+                        }
+                      }
+                    ],
+                    "sc:hasLists": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l010"
+                    },
+                    "exif:height": 2112,
+                    "exif:width": 3314
+                  },
+                  "rdf:rest": {
+                    "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e0/36/63/78/e0366378-2db5-477a-860b-0456f1356b93",
+                    "rdf:first": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c011",
+                      "@type": "sc:Canvas",
+                      "images": [
+                        {
+                          "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/ec/64/a8/e8/ec64a8e8-a9be-4148-872a-8c615adb86fe",
+                          "@type": "oa:Annotation",
+                          "resource": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/011.tif",
+                            "@type": "dctypes:Image",
+                            "service": "http://localhost:8888/iiif/011"
+                          }
+                        }
+                      ],
+                      "sc:hasLists": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l011"
+                      },
+                      "exif:height": 2112,
+                      "exif:width": 3314
+                    },
+                    "rdf:rest": {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/85/75/28/55/85752855-ac1f-497f-8264-e2eb490328cd",
+                      "rdf:first": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c012",
+                        "@type": "sc:Canvas",
+                        "images": [
+                          {
+                            "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/d4/ea/19/5c/d4ea195c-7a5b-45f3-a1d1-fe5eec3fe883",
+                            "@type": "oa:Annotation",
+                            "resource": {
+                              "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/012.tif",
+                              "@type": "dctypes:Image",
+                              "service": "http://localhost:8888/iiif/012"
+                            }
+                          }
+                        ],
+                        "sc:hasLists": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l012"
+                        },
+                        "exif:height": 2112,
+                        "exif:width": 3314
+                      },
+                      "rdf:rest": {
+                        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/2e/f0/10/88/2ef01088-216f-4717-9cc2-b4fcb042da4f",
+                        "rdf:first": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c013",
+                          "@type": "sc:Canvas",
+                          "images": [
+                            {
+                              "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/61/47/eb/3d/6147eb3d-4067-4111-86d5-cbeb0d964e8d",
+                              "@type": "oa:Annotation",
+                              "resource": {
+                                "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/013.tif",
+                                "@type": "dctypes:Image",
+                                "service": "http://localhost:8888/iiif/013"
+                              }
+                            }
+                          ],
+                          "sc:hasLists": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l013"
+                          },
+                          "exif:height": 2112,
+                          "exif:width": 3314
+                        },
+                        "rdf:rest": {
+                          "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/67/21/19/b1/672119b1-5405-4593-9c32-7a1cec309901"
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/67/21/19/b1/672119b1-5405-4593-9c32-7a1cec309901",
+                "rdf:first": {
+                  "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c014",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/a9/6c/d5/00/a96cd500-e951-4cd8-813d-8f55d1b2d20b",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/014.tif",
+                        "@type": "dctypes:Image",
+                        "service": "http://localhost:8888/iiif/014"
+                      }
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l014"
+                  },
+                  "exif:height": 2112,
+                  "exif:width": 3314
+                },
+                "rdf:rest": {
+                  "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/83/5b/1f/3c/835b1f3c-24b0-4959-8266-e50209e42071",
+                  "rdf:first": {
+                    "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c015",
+                    "@type": "sc:Canvas",
+                    "images": [
+                      {
+                        "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/b8/3f/33/e2/b83f33e2-dd0f-43fa-998d-c32888732cc5",
+                        "@type": "oa:Annotation",
+                        "resource": {
+                          "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/015.tif",
+                          "@type": "dctypes:Image",
+                          "service": "http://localhost:8888/iiif/015"
+                        }
+                      }
+                    ],
+                    "sc:hasLists": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l015"
+                    },
+                    "exif:height": 2112,
+                    "exif:width": 3314
+                  },
+                  "rdf:rest": {
+                    "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/55/a3/a4/11/55a3a411-94f8-4210-9c66-933d4eacc19c",
+                    "rdf:first": {
+                      "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c016",
+                      "@type": "sc:Canvas",
+                      "images": [
+                        {
+                          "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/af/0a/fc/04/af0afc04-1867-4dc7-bc1d-c4b9fcaf3e97",
+                          "@type": "oa:Annotation",
+                          "resource": {
+                            "@id": "http://localhost:8080/fcrepo/rest/edition/00027/res/016.tif",
+                            "@type": "dctypes:Image",
+                            "service": "http://localhost:8888/iiif/016"
+                          }
+                        }
+                      ],
+                      "sc:hasLists": {
+                        "@id": "http://localhost:8080/fcrepo/rest/edition/00027/list/l016"
+                      },
+                      "exif:height": 2112,
+                      "exif:width": 3314
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "within": "http://localhost:8080/fcrepo/rest/collection/blumenbach-editions",
+      "label": "Überschrift: Göttingen.  In: Göttingische Anzeigen von gelehrten Sachen [GAgS]"
+    }
+  ]
+}

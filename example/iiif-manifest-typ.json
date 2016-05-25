@@ -1,0 +1,222 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/manifest",
+  "@type": "sc:Manifest",
+  "within": "http://e.blumenbach.org/fcrepo/rest/collection/blumenbach-editions",
+  "label": "Überschrift: Göttingen.  In: Göttingische Anzeigen von gelehrten Sachen [GAgS]",
+  "description": "Göttingische Anzeigen von gelehrten Sachen [GAgS]",
+  "sc:hasRanges": null,
+  "sequences": [
+    {
+      "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/sequence/normal",
+      "@type": "sc:Sequence",
+      "canvases": [
+        {
+          "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/dc/e3/81/6e/dce3816e-2196-4756-b1f1-8d2e3eaf4e14",
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/res/000.tif",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3125,
+                "width": 2048,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://localhost:8888/iiif/807_001"
+                }
+              },
+              "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000"
+            }
+          ],
+          "otherContent": {
+            "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l000",
+            "@type": "sc:AnnotationList",
+            "resources": [
+              {
+                "@type": "oa:Annotation",
+                "motivation": "sc:painting",
+                "resource": {
+                  "@id": "http://exist.b-ol.de/restxq/werke/00214",
+                  "@type": "dctypes:Text",
+                  "format": "application/tei+xml",
+                  "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000#xywh=0,0,600,900"
+                }
+              }
+            ]
+          },
+          "label": "S. 000",
+          "height": 3125,
+          "width": 2048
+        },
+        {
+          "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/e4/91/0f/1f/e4910f1f-5aaa-4306-adbe-d7006f4d7969",
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/res/001.tif",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3125,
+                "width": 2048,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://localhost:8888/iiif/807_002"
+                }
+              },
+              "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001"
+            }
+          ],
+          "otherContent": {
+            "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l001",
+            "@type": "sc:AnnotationList",
+            "resources": [
+              {
+                "@type": "oa:Annotation",
+                "motivation": "sc:painting",
+                "resource": {
+                  "@id": "http://exist.b-ol.de/restxq/werke/00214",
+                  "@type": "dctypes:Text",
+                  "format": "application/tei+xml",
+                  "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001#xywh=0,0,600,900"
+                }
+              }
+            ]
+          },
+          "label": "S. 001",
+          "height": 3125,
+          "width": 2048
+        },
+        {
+          "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/ee/f7/20/98/eef72098-043b-427c-a6d9-b791845fe037",
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/res/002.tif",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3125,
+                "width": 2048,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://localhost:8888/iiif/807_003"
+                }
+              },
+              "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002"
+            }
+          ],
+          "otherContent": {
+            "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l002",
+            "@type": "sc:AnnotationList",
+            "resources": [
+              {
+                "@type": "oa:Annotation",
+                "motivation": "sc:painting",
+                "resource": {
+                  "@id": "http://exist.b-ol.de/restxq/werke/00214",
+                  "@type": "dctypes:Text",
+                  "format": "application/tei+xml",
+                  "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002#xywh=0,0,600,900"
+                }
+              }
+            ]
+          },
+          "label": "S. 002",
+          "height": 3125,
+          "width": 2048
+        },
+        {
+          "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/f1/71/c8/ec/f171c8ec-e830-4e1b-a431-4930e3fbff42",
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/res/003.tif",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3125,
+                "width": 2048,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://localhost:8888/iiif/807_004"
+                }
+              },
+              "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003"
+            }
+          ],
+          "otherContent": {
+            "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l003",
+            "@type": "sc:AnnotationList",
+            "resources": [
+              {
+                "@type": "oa:Annotation",
+                "motivation": "sc:painting",
+                "resource": {
+                  "@id": "http://exist.b-ol.de/restxq/werke/00214",
+                  "@type": "dctypes:Text",
+                  "format": "application/tei+xml",
+                  "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003#xywh=0,0,600,900"
+                }
+              }
+            ]
+          },
+          "label": "S. 003",
+          "height": 3125,
+          "width": 2048
+        },
+        {
+          "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004",
+          "@type": "sc:Canvas",
+          "images": [
+            {
+              "@id": "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/3b/b4/26/b5/3bb426b5-045f-4d42-b7ba-94b94204bf69",
+              "@type": "oa:Annotation",
+              "resource": {
+                "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/res/004.tif",
+                "@type": "dctypes:Image",
+                "format": "image/jpeg",
+                "height": 3125,
+                "width": 2048,
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "http://localhost:8888/iiif/807_005"
+                }
+              },
+              "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004"
+            }
+          ],
+          "otherContent": {
+            "@id": "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l004",
+            "@type": "sc:AnnotationList",
+            "resources": [
+              {
+                "@type": "oa:Annotation",
+                "motivation": "sc:painting",
+                "resource": {
+                  "@id": "http://exist.b-ol.de/restxq/werke/00214",
+                  "@type": "dctypes:Text",
+                  "format": "application/tei+xml",
+                  "on": "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004#xywh=0,0,600,900"
+                }
+              }
+            ]
+          },
+          "label": "S. 004",
+          "height": 3125,
+          "width": 2048
+        }
+      ]
+    }
+  ]
+}

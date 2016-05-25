@@ -1,0 +1,72 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX sc: <http://iiif.io/api/presentation/2#>
+PREFIX oa: <http://www.w3.org/ns/oa#>
+PREFIX exif: <http://www.w3.org/2003/12/exif/ns#>
+PREFIX svcs: <http://rdfs.org/sioc/services#>
+PREFIX dctypes: <http://purl.org/dc/dcmitype/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+CONSTRUCT {<http://localhost:8080/fcrepo/rest/edition/00027/manifest> sc:hasSequences ?seqid .
+ <http://localhost:8080/fcrepo/rest/edition/00027/manifest> dcterms:isPartOf <http://localhost:8080/fcrepo/rest/collection/blumenbach-editions> .
+ <http://localhost:8080/fcrepo/rest/edition/00027/manifest> rdfs:label "Überschrift: Göttingen.  In: Göttingische Anzeigen von gelehrten Sachen [GAgS]" .
+<http://localhost:8080/fcrepo/rest/edition/00027/manifest> rdf:type sc:Manifest .
+?seqid rdf:first ?sequence.
+?sequence rdf:type sc:Sequence .
+?sequence sc:hasCanvases ?canvaslistid .
+?canvaslistid  rdf:first ?first .
+?first rdf:type sc:Canvas .
+?first rdfs:label ?firstlabel .
+?first exif:height ?height .
+?first exif:width ?width .
+?first sc:hasImageAnnotations ?firstanno .
+?firstanno rdf:first ?firstresid .
+?firstresid rdf:type oa:Annotation.
+?firstresid  oa:hasBody ?firstimage .
+?firstimage svcs:has_service ?firstservice .
+?firstimage rdf:type dctypes:Image .
+?first sc:hasLists ?firstlist .
+?canvas rdf:type sc:Canvas .
+?canvas rdfs:label ?canvaslabel .
+?canvas exif:height ?height  .
+?canvas exif:width ?width  .
+?canvaslistid rdf:rest ?mid .
+?mid rdf:rest ?node .
+?node rdf:first ?canvas .
+?canvas sc:hasImageAnnotations ?annoid  .
+?canvas sc:hasLists ?list .
+?annoid rdf:first ?resid .
+?resid rdf:type oa:Annotation.
+?resid oa:hasBody ?image .
+?image svcs:has_service ?service .
+?image rdf:type dctypes:Image .
+?annoid rdf:rest ?rest .
+}
+
+WHERE {<http://localhost:8080/fcrepo/rest/edition/00027/manifest> sc:hasSequences ?seqid .
+?seqid rdf:first ?sequence .
+?sequence sc:hasCanvases ?canvaslistid .
+values ?e { rdf:first rdf:rest }
+?canvaslistid (rdf:rest|rdf:first)* ?mid . ?mid ?e ?node FILTER (?mid != ?node). FILTER (?canvaslistid != ?node).
+?canvaslistid rdf:first ?first .
+?first sc:hasImageAnnotations ?firstanno .
+?first sc:hasLists ?firstlistid .
+?first rdfs:label ?firstlabel .
+?firstlistid rdf:first ?firstlist .
+?firstanno rdf:first ?firstresid .
+?firstresid  oa:hasBody ?firstimage .
+?firstimage svcs:has_service ?firstservice .
+?first exif:height ?height .
+?first exif:width ?width .
+?node rdf:first ?canvas .
+?canvas sc:hasImageAnnotations ?annoid .
+?canvas sc:hasLists ?listid .
+?canvas rdfs:label ?canvaslabel .
+?listid rdf:first ?list .
+?canvas exif:height ?height .
+?canvas exif:width ?width .
+?annoid rdf:first ?resid .
+?resid  oa:hasBody ?image .
+?image svcs:has_service ?service .
+?annoid  rdf:rest ?rest}
+group by ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?seqid ?sequence ?first ?height ?width ?firstimage
+?firstresid ?firstanno ?firstlist ?list ?service ?firstservice ?canvaslabel ?firstlabel ORDER BY (?canvas) LIMIT 15
