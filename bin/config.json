@@ -1,0 +1,15 @@
+{
+  "title": "IIIF Manifest Service",
+
+  "datasources": {
+    "Pandora": {
+      "title": "Pandora",
+      "type": "SparqlJsonLdDatasource",
+      "description": "Pandora",
+      "settings": {
+        "url": "http://localhost:8080/fuseki/blume",
+        "querytemplate": "../sparql/manifest-query.sparql"
+      }
+    }
+  }
+}

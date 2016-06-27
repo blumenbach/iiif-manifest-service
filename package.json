@@ -1,0 +1,50 @@
+{
+  "name": "iiif-manifest-service",
+  "description": "IIIF Manifest Service",
+  "version": "0.0.1",
+  "license": "MIT",
+  "bin": {
+    "ldf-server": "./bin/manifest-svc"
+  },
+  "main": "module.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:blumenbach/iiif-manifest-service.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blumenbach/iiif-manifest-service/issues"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "hint": "./node_modules/jshint/bin/jshint bin/* lib test"
+  },
+  "dependencies": {
+    "qejs": "^3.0.0",
+    "q": "^0.8.12",
+    "n3": "^0.4.0",
+    "jsonld": "^0.4.2",
+    "request": "^2.27.0",
+    "mime": "^1.2.11",
+    "negotiate": "^1.0.1",
+    "lodash": "^2.4.2",
+    "lru-cache": "^2.5.0",
+    "uritemplate": "^0.3.0"
+  },
+  "optionalDependencies": {
+    "hdt": "^1.1.0",
+    "access-log": "^0.3.9"
+  },
+  "devDependencies": {
+    "chai": "^1.9.0",
+    "jshint": "^2.1.10",
+    "mocha": "^1.17.1",
+    "pre-commit": "^0.0.9",
+    "sinon": "1.10.3",
+    "sinon-chai": "^2.6.0",
+    "supertest": "^0.13.0"
+  },
+  "pre-commit": [
+    "hint",
+    "test"
+  ]
+}
