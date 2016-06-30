@@ -1,0 +1,19 @@
+{
+  "sc:hasCanvases": {
+    "@id": "_first:bnode",
+    "rdf:first": {
+      "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/canvas/c001",
+      "@type": "sc:Canvas"
+    },
+    "rdf:rest": [
+      {
+        "@id": "_second:bnode",
+        "rdf:first": {
+          "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/canvas/c002",
+          "@type": "sc:Canvas"
+        },
+        "rdf:rest": {...}
+      }
+    ]
+  }
+}

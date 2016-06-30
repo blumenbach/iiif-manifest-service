@@ -1,0 +1,105 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@graph": [
+    {
+      "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest",
+      "@type": "sc:Manifest",
+      "sc:hasRanges": {
+        "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/range",
+        "@type": "sc:Range",
+        "sc:hasCanvases": {
+          "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/3a/4a/e0/05/3a4ae005-6eaf-4cb0-b6e2-5d9ff77c92e7",
+          "rdf:first": {
+            "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/canvas/c001",
+            "@type": "sc:Canvas",
+            "sc:hasImageAnnotations": {
+              "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/9f/da/c0/e6/9fdac0e6-14b2-4ab6-9184-fab85d3d72b8",
+              "rdf:first": {
+                "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/b1/f1/a8/d9/b1f1a8d9-ca38-4030-a4da-ecf90d153059",
+                "@type": "oa:Annotation",
+                "resource": {
+                  "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/res/001.tif",
+                  "@type": "dctypes:Image",
+                  "service": {
+                    "@id": "http://localhost:8888/iiif/AIG.702.001",
+                    "http://iiif.io/api/presentation/3#context": {
+                      "@id": "http://iiif.io/api/image/2/context.json"
+                    }
+                  }
+                },
+                "motivation": "sc:painting"
+              }
+            },
+            "sc:hasLists": {
+              "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/list/desc:00283"
+            },
+            "height": "2616",
+            "width": "3928"
+          },
+          "rdf:rest": [
+            {
+              "@list": [
+                {
+                  "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/canvas/c002",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/94/f8/24/8e/94f8248e-7f22-486b-a7e1-e2cf2fc38975",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/res/002.tif",
+                        "@type": "dctypes:Image",
+                        "service": {
+                          "@id": "http://localhost:8888/iiif/AIG.702.002",
+                          "http://iiif.io/api/presentation/3#context": {
+                            "@id": "http://iiif.io/api/image/2/context.json"
+                          }
+                        }
+                      },
+                      "motivation": "sc:painting"
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/list/desc:00283"
+                  },
+                  "height": "2616",
+                  "width": "3928"
+                },
+                {
+                  "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/canvas/c003",
+                  "@type": "sc:Canvas",
+                  "images": [
+                    {
+                      "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/8f/31/3a/ad/8f313aad-1328-4af3-b2d3-02ea50cf283e",
+                      "@type": "oa:Annotation",
+                      "resource": {
+                        "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/res/003.tif",
+                        "@type": "dctypes:Image",
+                        "service": {
+                          "@id": "http://localhost:8888/iiif/AIG.702.003",
+                          "http://iiif.io/api/presentation/3#context": {
+                            "@id": "http://iiif.io/api/image/2/context.json"
+                          }
+                        }
+                      },
+                      "motivation": "sc:painting"
+                    }
+                  ],
+                  "sc:hasLists": {
+                    "@id": "http://localhost:8080/fcrepo/rest/collection/AIG/702/list/desc:00283"
+                  },
+                  "height": "2616",
+                  "width": "3928"
+                }
+              ]
+            },
+            {
+              "@id": "http://localhost:8080/fcrepo/rest/.well-known/genid/3a/4a/e0/05/3a4ae005-6eaf-4cb0-b6e2-5d9ff77c92e7"
+            }
+          ]
+        }
+      },
+      "sc:hasSequences": null
+    }
+  ]
+}

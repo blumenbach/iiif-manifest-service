@@ -8,23 +8,16 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fedora: <http://fedora.info/definitions/v4/repository#>
 PREFIX fixme: <http://iiif.io/api/presentation/3#>
-CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:hasSequences ?seqid .
- <http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> dcterms:isPartOf <http://localhost:8080/fcrepo/rest/collection/AIG> .
- <http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> rdfs:label "Mensch (Grönländerin) [Schädel]" .
-<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> rdf:type sc:Manifest .
-?seqid rdf:first ?sequence.
-?seqid rdf:type rdf:List .
-?sequence rdf:type sc:Sequence .
-?sequence sc:hasCanvases ?canvaslistid .
+CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> rdf:type sc:Manifest .
+  <http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:hasRanges <http://localhost:8080/fcrepo/rest/collection/AIG/702/range> .
+  <http://localhost:8080/fcrepo/rest/collection/AIG/702/range> sc:hasCanvases ?canvaslistid .
+  <http://localhost:8080/fcrepo/rest/collection/AIG/702/range> rdf:type sc:Range .
 ?canvaslistid  rdf:first ?first .
-?canvaslistid  rdf:type rdf:List .
 ?first rdf:type sc:Canvas .
-?first rdf:type rdf:List .
 ?first exif:height ?height .
 ?first exif:width ?width .
 ?first sc:hasImageAnnotations ?firstanno .
 ?firstanno rdf:first ?firstresid .
-?firstanno rdf:type rdf:List .
 ?firstresid rdf:type oa:Annotation.
 ?firstresid  oa:hasBody ?firstimage .
 ?firstresid oa:motivatedBy sc:painting .
@@ -33,18 +26,14 @@ CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:ha
 ?firstimage rdf:type dctypes:Image .
 ?first sc:hasLists ?firstlist .
 ?canvas rdf:type sc:Canvas .
-?canvas rdf:type rdf:List .
 ?canvas exif:height ?height  .
 ?canvas exif:width ?width  .
 ?canvaslistid rdf:rest ?mid .
 ?mid rdf:rest ?node .
-?mid rdf:type rdf:List .
 ?node rdf:first ?canvas .
-?node rdf:type rdf:List .
 ?canvas sc:hasImageAnnotations ?annoid  .
 ?canvas sc:hasLists ?list .
 ?annoid rdf:first ?resid .
-?annoid rdf:type rdf:List .
 ?resid rdf:type oa:Annotation.
 ?resid oa:hasBody ?image .
 ?resid oa:motivatedBy sc:painting .
@@ -54,9 +43,7 @@ CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:ha
 ?annoid rdf:rest ?rest .
 }
 
-WHERE {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:hasSequences ?seqid .
-?seqid rdf:first ?sequence .
-?sequence sc:hasCanvases ?canvaslistid .
+WHERE {<http://localhost:8080/fcrepo/rest/collection/AIG/702/range> sc:hasCanvases ?canvaslistid .
 values ?e { rdf:first rdf:rest }
 ?canvaslistid (rdf:rest|rdf:first)* ?mid . ?mid ?e ?node FILTER (?mid != ?node). FILTER (?canvaslistid != ?node).
 ?canvaslistid rdf:first ?first .
@@ -78,5 +65,5 @@ values ?e { rdf:first rdf:rest }
 ?resid  oa:hasBody ?image .
 ?image svcs:has_service ?service .
 ?annoid  rdf:rest ?rest}
-group by ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?seqid ?sequence ?first ?height ?width ?firstimage
+group by ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?first ?height ?width ?firstimage
 ?firstresid ?firstanno ?firstlist ?list ?service ?firstservice ?canvaslabel ?firstlabel ORDER BY (?canvas)

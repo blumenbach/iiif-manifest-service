@@ -1,0 +1,15 @@
+{
+  "title": "IIIF Manifest Service",
+
+  "datasources": {
+    "Pandora": {
+      "title": "FromRDF",
+      "type": "NQDatasource",
+      "description": "FromRDF",
+      "settings": {
+        "file": "../data/smalltest.nq",
+        "frame": "http://localhost:8888/frame.json"
+      }
+    }
+  }
+}
