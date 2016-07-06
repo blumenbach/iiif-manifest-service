@@ -1,0 +1,19 @@
+[
+  {
+    "all": [
+      "0",
+      "true",
+      "http://fedora.info/definitions/v4/repository#Skolem",
+      "http://www.w3.org/ns/ldp#RDFSource",
+      "http://localhost:8080/fcrepo/rest/.well-known/genid/84/9d/97/cc/849d97cc-dc3a-425e-bacb-05184ef43cf3/fcr:export?format=jcr/xml",
+      "http://www.w3.org/ns/ldp#Container",
+      "http://www.w3.org/ns/ldp#BasicContainer",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#nil",
+      "http://localhost:8080/fcrepo/rest/collection/AIG/702/sequence/normal",
+      "http://localhost:8080/fcrepo/rest/.well-known/genid"
+    ],
+    "skolem": [
+      "http://localhost:8080/fcrepo/rest/.well-known/genid/84/9d/97/cc/849d97cc-dc3a-425e-bacb-05184ef43cf3"
+    ]
+  }
+]

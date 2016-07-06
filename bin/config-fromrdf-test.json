@@ -7,7 +7,7 @@
       "type": "NQDatasource",
       "description": "FromRDF",
       "settings": {
-        "file": "../data/smalltest.nq",
+        "file": "../data/test.n3",
         "frame": "http://localhost:8888/frame.json"
       }
     }
