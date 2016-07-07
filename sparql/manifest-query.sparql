@@ -13,19 +13,16 @@ CONSTRUCT {?manifest sc:hasSequences ?seqid .
 ?manifest rdfs:label ?manifestlabel .
 ?manifest rdf:type sc:Manifest .
 ?seqid rdf:type rdf:List .
-?seqid rdf:type rdf:head .
 ?seqid rdf:first ?sequence.
 ?seqid rdf:rest ?seqrest .
 ?sequence rdf:type sc:Sequence .
 ?sequence sc:hasCanvases ?canvaslistid .
 ?canvaslistid rdf:first ?first .
-?canvaslistid rdf:type rdf:head .
 ?canvaslistid rdf:type rdf:List .
 ?first exif:height ?height .
 ?first exif:width ?width .
 ?first sc:hasImageAnnotations ?firstanno .
 ?firstanno rdf:type rdf:List .
-?firstanno rdf:type rdf:head .
 ?firstanno rdf:first ?firstresid .
 ?firstanno rdf:rest ?firstresrest .
 ?firstresid rdf:type oa:Annotation.

@@ -8,13 +8,15 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fedora: <http://fedora.info/definitions/v4/repository#>
 PREFIX fixme: <http://iiif.io/api/presentation/3#>
-CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> rdf:type sc:Manifest .
-  <http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> sc:hasRanges ?range .
+CONSTRUCT {?manifest rdf:type sc:Manifest .
+?manifest sc:hasSequences ?rangeid .
+?rangeid rdf:first ?range .
+?rangeid rdf:type rdf:List .
+?rangeid rdf:rest ?rangerest .
+?range rdf:type sc:Sequence .
 ?range sc:hasCanvases ?canvaslistid .
-?range rdf:type rdf:List .
-?range rdf:type rdf:head .
-?range rdf:type sc:Range .
 ?canvaslistid rdf:first ?first .
+?canvaslistid rdf:type rdf:List .
 ?first rdf:type sc:Canvas .
 ?first exif:height ?height .
 ?first exif:width ?width .
@@ -49,10 +51,13 @@ CONSTRUCT {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> rdf:t
 ?annoid rdf:rest ?rest .
 }
 
-WHERE {values ?range {<http://localhost:8080/fcrepo/rest/collection/AIG/702/range>}
+WHERE {values ?manifest {<http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest>}
+?manifest sc:hasSequences ?rangeid .
+?rangeid rdf:first ?range .
+?rangeid rdf:rest ?rangerest .
 ?range sc:hasCanvases ?canvaslistid .
 values ?e { rdf:first rdf:rest }
-?canvaslistid (rdf:rest|rdf:first)* ?mid . ?mid ?e ?node FILTER (?mid != ?node). FILTER (?canvaslistid != ?node).
+?canvaslistid (rdf:rest)* ?mid . ?mid ?e ?node FILTER (?mid != ?node). FILTER (?canvaslistid != ?node).
 ?canvaslistid rdf:first ?first .
 ?first sc:hasImageAnnotations ?firstanno .
 ?first sc:hasLists ?firstlistid .
@@ -74,5 +79,5 @@ values ?e { rdf:first rdf:rest }
 ?resid  oa:hasBody ?image .
 ?image svcs:has_service ?service .
 ?annoid rdf:rest ?rest}
-group by ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?first ?height ?width ?firstimage
-?firstresid ?firstanno ?firstlist ?list ?service ?firstservice ?canvaslabel ?firstlabel ?range ?firstresrest ?last ORDER BY (?canvas)
+group by ?manifest ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?first ?height ?width ?firstimage
+?firstresid ?firstanno ?firstlist ?list ?service ?firstservice ?canvaslabel ?firstlabel ?range ?rangeid ?rangerest ?firstresrest ?last ORDER BY (?canvas)

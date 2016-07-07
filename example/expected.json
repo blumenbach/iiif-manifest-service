@@ -1,0 +1,291 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://exist.b-ol.de/restxq/werke/00214",
+    "motivatedBy" : "http://iiif.io/api/presentation/2#painting"
+  }, {
+    "@id" : "_:b19",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://exist.b-ol.de/restxq/werke/00214",
+    "motivatedBy" : "http://iiif.io/api/presentation/2#painting"
+  }, {
+    "@id" : "_:b21",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://exist.b-ol.de/restxq/werke/00214",
+    "motivatedBy" : "http://iiif.io/api/presentation/2#painting"
+  }, {
+    "@id" : "_:b24",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://exist.b-ol.de/restxq/werke/00214",
+    "motivatedBy" : "http://iiif.io/api/presentation/2#painting"
+  }, {
+    "@id" : "_:b7",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://exist.b-ol.de/restxq/werke/00214",
+    "motivatedBy" : "http://iiif.io/api/presentation/2#painting"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/3b/b4/26/b5/3bb426b5-045f-4d42-b7ba-94b94204bf69",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/004.tif",
+    "hasTarget" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/dc/e3/81/6e/dce3816e-2196-4756-b1f1-8d2e3eaf4e14",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/000.tif",
+    "hasTarget" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/e4/91/0f/1f/e4910f1f-5aaa-4306-adbe-d7006f4d7969",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/001.tif",
+    "hasTarget" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/ee/f7/20/98/eef72098-043b-427c-a6d9-b791845fe037",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/002.tif",
+    "hasTarget" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/f1/71/c8/ec/f171c8ec-e830-4e1b-a431-4930e3fbff42",
+    "@type" : "http://www.w3.org/ns/oa#Annotation",
+    "hasBody" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/003.tif",
+    "hasTarget" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000",
+    "@type" : "http://iiif.io/api/presentation/2#Canvas",
+    "hasImageAnnotations" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/dc/e3/81/6e/dce3816e-2196-4756-b1f1-8d2e3eaf4e14" ]
+    },
+    "hasLists" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l000" ]
+    },
+    "label" : "S. 000",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001",
+    "@type" : "http://iiif.io/api/presentation/2#Canvas",
+    "hasImageAnnotations" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/e4/91/0f/1f/e4910f1f-5aaa-4306-adbe-d7006f4d7969" ]
+    },
+    "hasLists" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l001" ]
+    },
+    "label" : "S. 001",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002",
+    "@type" : "http://iiif.io/api/presentation/2#Canvas",
+    "hasImageAnnotations" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/ee/f7/20/98/eef72098-043b-427c-a6d9-b791845fe037" ]
+    },
+    "hasLists" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l002" ]
+    },
+    "label" : "S. 002",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003",
+    "@type" : "http://iiif.io/api/presentation/2#Canvas",
+    "hasImageAnnotations" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/f1/71/c8/ec/f171c8ec-e830-4e1b-a431-4930e3fbff42" ]
+    },
+    "hasLists" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l003" ]
+    },
+    "label" : "S. 003",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004",
+    "@type" : "http://iiif.io/api/presentation/2#Canvas",
+    "hasImageAnnotations" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/.well-known/genid/3b/b4/26/b5/3bb426b5-045f-4d42-b7ba-94b94204bf69" ]
+    },
+    "hasLists" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l004" ]
+    },
+    "label" : "S. 004",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l000",
+    "@type" : "http://iiif.io/api/presentation/2#AnnotationList",
+    "hasAnnotations" : {
+      "@list" : [ "_:b0" ]
+    }
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l001",
+    "@type" : "http://iiif.io/api/presentation/2#AnnotationList",
+    "hasAnnotations" : {
+      "@list" : [ "_:b19" ]
+    }
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l002",
+    "@type" : "http://iiif.io/api/presentation/2#AnnotationList",
+    "hasAnnotations" : {
+      "@list" : [ "_:b24" ]
+    }
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l003",
+    "@type" : "http://iiif.io/api/presentation/2#AnnotationList",
+    "hasAnnotations" : {
+      "@list" : [ "_:b21" ]
+    }
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/list/l004",
+    "@type" : "http://iiif.io/api/presentation/2#AnnotationList",
+    "hasAnnotations" : {
+      "@list" : [ "_:b7" ]
+    }
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/manifest",
+    "@type" : "http://iiif.io/api/presentation/2#Manifest",
+    "hasSequences" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/sequence/normal" ]
+    },
+    "description" : "Göttingische Anzeigen von gelehrten Sachen [GAgS]",
+    "isPartOf" : "http://e.blumenbach.org/fcrepo/rest/collection/blumenbach-editions",
+    "label" : "Überschrift: Göttingen.  In: Göttingische Anzeigen von gelehrten Sachen [GAgS]"
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/000.tif",
+    "@type" : "http://purl.org/dc/dcmitype/Image",
+    "format" : "image/jpeg",
+    "has_service" : "http://localhost:8888/iiif/807_001",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/001.tif",
+    "@type" : "http://purl.org/dc/dcmitype/Image",
+    "format" : "image/jpeg",
+    "has_service" : "http://localhost:8888/iiif/807_002",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/002.tif",
+    "@type" : "http://purl.org/dc/dcmitype/Image",
+    "format" : "image/jpeg",
+    "has_service" : "http://localhost:8888/iiif/807_003",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/003.tif",
+    "@type" : "http://purl.org/dc/dcmitype/Image",
+    "format" : "image/jpeg",
+    "has_service" : "http://localhost:8888/iiif/807_004",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/res/004.tif",
+    "@type" : "http://purl.org/dc/dcmitype/Image",
+    "format" : "image/jpeg",
+    "has_service" : "http://localhost:8888/iiif/807_005",
+    "http://www.w3.org/2003/12/exif/ns#height" : 3125,
+    "http://www.w3.org/2003/12/exif/ns#width" : 2048
+  }, {
+    "@id" : "http://e.blumenbach.org/fcrepo/rest/edition/base/sequence/normal",
+    "@type" : "http://iiif.io/api/presentation/2#Sequence",
+    "hasCanvases" : {
+      "@list" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004" ]
+    }
+  }, {
+    "@id" : "http://exist.b-ol.de/restxq/werke/00214",
+    "@type" : "http://purl.org/dc/dcmitype/Text",
+    "format" : "application/tei+xml",
+    "hasTarget" : [ "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c004#xywh=0,0,600,900", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c003#xywh=0,0,600,900", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c002#xywh=0,0,600,900", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c001#xywh=0,0,600,900", "http://e.blumenbach.org/fcrepo/rest/edition/base/canvas/c000#xywh=0,0,600,900" ]
+  } ],
+  "@context" : {
+    "motivatedBy" : {
+      "@id" : "http://www.w3.org/ns/oa#motivatedBy",
+      "@type" : "@id"
+    },
+    "hasBody" : {
+      "@id" : "http://www.w3.org/ns/oa#hasBody",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "@type" : "@id"
+    },
+    "first" : {
+      "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "@type" : "@id"
+    },
+    "hasAnnotations" : {
+      "@id" : "http://iiif.io/api/presentation/2#hasAnnotations",
+      "@type" : "@id"
+    },
+    "width" : {
+      "@id" : "http://www.w3.org/2003/12/exif/ns#width",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "height" : {
+      "@id" : "http://www.w3.org/2003/12/exif/ns#height",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasLists" : {
+      "@id" : "http://iiif.io/api/presentation/2#hasLists",
+      "@type" : "@id"
+    },
+    "hasImageAnnotations" : {
+      "@id" : "http://iiif.io/api/presentation/2#hasImageAnnotations",
+      "@type" : "@id"
+    },
+    "has_service" : {
+      "@id" : "http://rdfs.org/sioc/services#has_service",
+      "@type" : "@id"
+    },
+    "format" : {
+      "@id" : "http://purl.org/dc/elements/1.1/format"
+    },
+    "hasCanvases" : {
+      "@id" : "http://iiif.io/api/presentation/2#hasCanvases",
+      "@type" : "@id"
+    },
+    "hasTarget" : {
+      "@id" : "http://www.w3.org/ns/oa#hasTarget",
+      "@type" : "@id"
+    },
+    "isPartOf" : {
+      "@id" : "http://purl.org/dc/terms/isPartOf",
+      "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
+    },
+    "hasSequences" : {
+      "@id" : "http://iiif.io/api/presentation/2#hasSequences",
+      "@type" : "@id"
+    },
+    "premis" : "http://www.loc.gov/premis/rdf/v1#",
+    "nt" : "http://www.jcp.org/jcr/nt/1.0",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ns004" : "http://www.w3.org/ns/auth/acl#",
+    "ns003" : "http://id.loc.gov/vocabulary/relators/",
+    "ns002" : "http://purl.org/dc/terms/",
+    "ns001" : "info:fedora/fedora-system:def/model#",
+    "xsi" : "http://www.w3.org/2001/XMLSchema-instance",
+    "mode" : "http://www.modeshape.org/1.0",
+    "ns007" : "http://pcdm.org/models#",
+    "ns006" : "http://scholarsphere.psu.edu/ns#",
+    "ns005" : "info:fedora/fedora-system:def/relations-external#",
+    "blume" : "http://purl.org/vocab/blumenbach#",
+    "xml" : "http://www.w3.org/XML/1998/namespace",
+    "fedoraconfig" : "http://fedora.info/definitions/v4/config#",
+    "mix" : "http://www.jcp.org/jcr/mix/1.0",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "image" : "http://www.modeshape.org/images/1.0",
+    "sv" : "http://www.jcp.org/jcr/sv/1.0",
+    "test" : "info:fedora/test/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "fedora" : "http://fedora.info/definitions/v4/repository#",
+    "ebucore" : "http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#",
+    "ldp" : "http://www.w3.org/ns/ldp#",
+    "xs" : "http://www.w3.org/2001/XMLSchema",
+    "dc" : "http://purl.org/dc/elements/1.1/"
+  }
+}
