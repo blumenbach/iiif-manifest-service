@@ -7,48 +7,58 @@ PREFIX dctypes: <http://purl.org/dc/dcmitype/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fedora: <http://fedora.info/definitions/v4/repository#>
-PREFIX fixme: <http://iiif.io/api/presentation/3#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
 CONSTRUCT {?manifest rdf:type sc:Manifest .
-?manifest sc:hasSequences ?rangeid .
-?rangeid rdf:first ?range .
-?rangeid rdf:type rdf:List .
-?rangeid rdf:rest ?rangerest .
-?range rdf:type sc:Sequence .
-?range sc:hasCanvases ?canvaslist.
+?manifest sc:hasRanges ?seqid .
+?seqid rdf:first ?sequence .
+?seqid rdf:rest ?seqrest .
+?sequence rdf:type sc:Range .
+?sequence sc:hasCanvases ?canvaslist.
 ?mid rdf:first ?canvas .
-?mid rdf:type rdf:List .
 ?mid rdf:rest ?last .
 ?canvas rdf:type sc:Canvas .
 ?canvas exif:height ?height  .
 ?canvas exif:width ?width  .
-?canvas sc:hasImageAnnotations ?annoid  .
-?annoid rdf:type rdf:List .
-?canvas sc:hasLists ?list .
-?annoid rdf:first ?resid .
+?canvas sc:hasImageAnnotations ?imageid .
+?imageid rdf:first ?resid .
+?imageid rdf:rest rdf:nil .
 ?resid rdf:type oa:Annotation.
 ?resid oa:hasBody ?image .
+?resid oa:hasTarget ?canvas .
 ?resid oa:motivatedBy sc:painting .
 ?image svcs:has_service ?service .
 ?service rdf:type <http://iiif.io/api/image/2/context.json> .
 ?image rdf:type dctypes:Image .
-?annoid rdf:rest ?rest .
+?image exif:height ?iheight.
+?image exif:width ?iwidth .
+?image dc:format ?format .
+?canvas sc:hasLists ?listid .
+?listid rdf:type sc:AnnotationList .
+?listid rdf:first ?annolistid .
+?listid rdf:rest ?annolistidrest .
 }
 
-WHERE {values ?manifest {<http://localhost:8080/fcrepo/rest/edition/base/manifest>}
-?manifest sc:hasSequences ?rangeid .
-?rangeid rdf:first ?range .
-?rangeid rdf:rest ?rangerest .
-?range sc:hasCanvases ?canvaslist .
+WHERE {values ?manifest {<http://localhost:8080/fcrepo/rest/collection/AIG/769/manifest>}
+?manifest sc:hasRanges ?seqid .
+?seqid rdf:first ?sequence .
+?seqid rdf:rest ?seqrest .
+?sequence sc:hasCanvases ?canvaslist .
 ?canvaslist rdf:rest* ?mid .
 ?mid rdf:first ?canvas .
 ?mid rdf:rest ?last .
-?canvas sc:hasImageAnnotations ?annoid .
-?canvas sc:hasLists ?listid .
-?listid rdf:first ?list .
+?canvas sc:hasImageAnnotations ?imageid .
 ?canvas exif:height ?height .
 ?canvas exif:width ?width .
-?annoid rdf:first ?resid .
-?resid  oa:hasBody ?image .
+?imageid rdf:first ?resid .
+?resid oa:hasBody ?image .
 ?image svcs:has_service ?service .
-?annoid rdf:rest ?rest}
-group by ?manifest ?node ?canvas ?image ?canvaslist ?mid ?annoid ?resid ?rest ?height ?width ?list ?service ?canvaslabel ?range ?rangeid ?rangerest ?last ORDER BY (?canvas)
+?image exif:height ?iheight .
+?image exif:width ?iwidth .
+?image dc:format ?format .
+?canvas sc:hasLists ?listid .
+?listid rdf:first ?annolistid .
+?listid rdf:rest ?annolistidrest .
+}
+group by ?manifest ?canvas ?image ?canvaslist ?mid ?imageid ?resid ?height ?width ?iheight ?iwidth ?format
+?service ?listid ?annolistid ?annolistidrest ?canvaslabel ?sequence ?seqid ?seqrest ?last
+ORDER BY (?canvas)

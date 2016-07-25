@@ -7,80 +7,58 @@ PREFIX dctypes: <http://purl.org/dc/dcmitype/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX fedora: <http://fedora.info/definitions/v4/repository#>
-PREFIX fixme: <http://iiif.io/api/presentation/3#>
-CONSTRUCT {?manifest sc:hasSequences ?seqid .
-?manifest dcterms:isPartOf ?collection .
-?manifest rdfs:label ?manifestlabel .
-?manifest rdf:type sc:Manifest .
-?seqid rdf:type rdf:List .
-?seqid rdf:first ?sequence.
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+CONSTRUCT {?manifest rdf:type sc:Manifest .
+?manifest sc:hasSequences ?seqid .
+?seqid rdf:first ?sequence .
 ?seqid rdf:rest ?seqrest .
 ?sequence rdf:type sc:Sequence .
-?sequence sc:hasCanvases ?canvaslistid .
-?canvaslistid rdf:first ?first .
-?canvaslistid rdf:type rdf:List .
-?first exif:height ?height .
-?first exif:width ?width .
-?first sc:hasImageAnnotations ?firstanno .
-?firstanno rdf:type rdf:List .
-?firstanno rdf:first ?firstresid .
-?firstanno rdf:rest ?firstresrest .
-?firstresid rdf:type oa:Annotation.
-?firstresid  oa:hasBody ?firstimage .
-?firstresid oa:motivatedBy sc:painting .
-?firstimage svcs:has_service ?firstservice .
-?firstservice fixme:context <http://iiif.io/api/image/2/context.json> .
-?firstimage rdf:type dctypes:Image .
-?first sc:hasLists ?firstlist .
+?sequence sc:hasCanvases ?canvaslist.
+?mid rdf:first ?canvas .
+?mid rdf:rest ?last .
 ?canvas rdf:type sc:Canvas .
 ?canvas exif:height ?height  .
 ?canvas exif:width ?width  .
-?canvaslistid rdf:rest ?mid .
-?mid rdf:rest ?node .
-?node rdf:first ?canvas .
-?node rdf:rest ?last .
-?canvas sc:hasImageAnnotations ?annoid  .
-?canvas sc:hasLists ?list .
-?annoid rdf:first ?resid .
-?annoid rdf:rest ?rest .
+?canvas sc:hasImageAnnotations ?imageid .
+?imageid rdf:first ?resid .
+?imageid rdf:rest rdf:nil .
 ?resid rdf:type oa:Annotation.
 ?resid oa:hasBody ?image .
+?resid oa:hasTarget ?canvas .
 ?resid oa:motivatedBy sc:painting .
 ?image svcs:has_service ?service .
-?service fixme:context <http://iiif.io/api/image/2/context.json> .
+?service rdf:type <http://iiif.io/api/image/2/context.json> .
 ?image rdf:type dctypes:Image .
+?image exif:height ?iheight.
+?image exif:width ?iwidth .
+?image dc:format ?format .
+?canvas sc:hasLists ?listid .
+?listid rdf:first ?annolistid .
+?annolistid rdf:type sc:AnnotationList .
+?listid rdf:rest ?annolistidrest .
 }
 
-WHERE { values ?manifest { <http://localhost:8080/fcrepo/rest/collection/AIG/702/manifest> }.
+WHERE {values ?manifest {<http://localhost:8080/fcrepo/rest/collection/AIG/769/manifest>}
 ?manifest sc:hasSequences ?seqid .
-?manifest rdfs:label ?manifestlabel .
-?manifest dcterms:isPartOf ?collection .
 ?seqid rdf:first ?sequence .
 ?seqid rdf:rest ?seqrest .
-?sequence sc:hasCanvases ?canvaslistid .
-values ?e { rdf:first rdf:rest }
-?canvaslistid (rdf:rest|rdf:first)* ?mid . ?mid ?e ?node FILTER (?mid != ?node). FILTER (?canvaslistid != ?node).
-?canvaslistid rdf:first ?first .
-?first sc:hasImageAnnotations ?firstanno .
-?first sc:hasLists ?firstlistid .
-?firstlistid rdf:first ?firstlist .
-?firstanno rdf:first ?firstresid .
-?firstanno rdf:rest ?firstresrest .
-?firstresid  oa:hasBody ?firstimage .
-?firstimage svcs:has_service ?firstservice .
-?first exif:height ?height .
-?first exif:width ?width .
-?node rdf:first ?canvas .
-?node rdf:rest ?last .
-?canvas sc:hasImageAnnotations ?annoid .
-?canvas sc:hasLists ?listid .
-?listid rdf:first ?list .
+?sequence sc:hasCanvases ?canvaslist .
+?canvaslist rdf:rest* ?mid .
+?mid rdf:first ?canvas .
+?mid rdf:rest ?last .
+?canvas sc:hasImageAnnotations ?imageid .
 ?canvas exif:height ?height .
 ?canvas exif:width ?width .
-?annoid rdf:first ?resid .
-?resid  oa:hasBody ?image .
+?imageid rdf:first ?resid .
+?resid oa:hasBody ?image .
 ?image svcs:has_service ?service .
-?annoid rdf:rest ?rest}
-group by ?manifest ?manifestlabel ?collection ?node ?canvas ?image ?canvaslistid ?mid ?annoid ?resid ?rest ?seqid
-?sequence ?first ?height ?width ?firstimage ?firstresid ?firstanno ?firstlist ?list ?service ?firstservice ?canvaslabel
-?firstlabel ?seqrest ?firstresrest ?last ORDER BY (?canvas)
+?image exif:height ?iheight .
+?image exif:width ?iwidth .
+?image dc:format ?format .
+?canvas sc:hasLists ?listid .
+?listid rdf:first ?annolistid .
+?listid rdf:rest ?annolistidrest .
+}
+group by ?manifest ?seqid ?sequence ?seqrest ?canvaslist ?mid ?canvas ?last ?height ?width ?imageid ?resid ?image ?service ?iheight ?iwidth ?format
+?listid ?annolistid ?annolistidrest
+ORDER BY (?canvas)

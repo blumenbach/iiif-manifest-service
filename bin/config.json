@@ -8,7 +8,7 @@
       "description": "Pandora",
       "settings": {
         "url": "http://localhost:8080/fuseki/fcrepo",
-        "querytemplate": "../sparql/range-query.sparql",
+        "querytemplate": "../sparql/manifest-query.sparql",
         "context": "http://iiif.io/api/presentation/2/context.json",
         "frame": "http://localhost:8888/frame.json"
       }

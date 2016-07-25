@@ -34,39 +34,6 @@
             },
             "rdf:rest": [
               {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/59/21/c1/90/5921c190-142e-46ad-a504-479fa2114012"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e0/36/63/78/e0366378-2db5-477a-860b-0456f1356b93"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/f0/c7/2c/5a/f0c72c5a-9b89-48b5-b0e0-010a15dd2e3a"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/83/5b/1f/3c/835b1f3c-24b0-4959-8266-e50209e42071"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/e5/76/db/27/e576db27-bc7d-400e-a309-90d790c8342f"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/85/75/28/55/85752855-ac1f-497f-8264-e2eb490328cd"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/fc/6d/58/2a/fc6d582a-368b-46a4-a2c4-436cbc5dea1c"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/2e/f0/10/88/2ef01088-216f-4717-9cc2-b4fcb042da4f"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/63/aa/f1/95/63aaf195-490d-41ef-a3e6-39793e88bafb"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/21/c0/dd/47/21c0dd47-1de9-43bf-ab3c-713d9596c0e8"
-              },
-              {
-                "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/d4/02/5c/7b/d4025c7b-8872-4e4d-8610-ab165d5ad519"
-              },
-              {
                 "@id": "http://localhost:8080/fcrepo/rest/.well-known%5B2%5D/genid/c0/94/01/8a/c094018a-1a95-4efb-b5f4-874fd8aeb72c",
                 "rdf:first": {
                   "@id": "http://localhost:8080/fcrepo/rest/edition/00027/canvas/c002",
